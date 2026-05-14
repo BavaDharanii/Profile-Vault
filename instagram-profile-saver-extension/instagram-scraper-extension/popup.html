@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Profile Vault>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      width: 340px;
+      background: #fff;
+      color: #111;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #405DE6, #833AB4, #C13584, #FD1D1D);
+      padding: 18px 20px;
+      color: white;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .header h1 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .header p {
+      font-size: 12px;
+      opacity: 0.85;
+    }
+
+    .body {
+      padding: 16px;
+    }
+
+    .count-badge {
+      background: #f3f3f3;
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .count-text {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .count-num {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .profiles-list {
+      max-height: 220px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .profile-item {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .profile-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .profile-sub {
+      font-size: 11.5px;
+      color: #999;
+      margin-top: 1px;
+    }
+
+    .profile-followers {
+      font-size: 12px;
+      font-weight: 600;
+      color: #C13584;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 30px 0;
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    .empty-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .btn-export {
+      width: 100%;
+      background: linear-gradient(135deg, #405DE6, #C13584, #FD1D1D);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: filter 0.2s;
+    }
+
+    .btn-export:hover { filter: brightness(1.07); }
+
+    .btn-clear {
+      width: 100%;
+      background: #f3f3f3;
+      color: #777;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn-clear:hover { background: #ebebeb; }
+
+    .divider {
+      height: 1px;
+      background: #f0f0f0;
+      margin: 14px 0;
+    }
+
+    .tip {
+      font-size: 11.5px;
+      color: #aaa;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+      </svg>
+      <h1>Instagram Profile Vault</h1>
+    </div>
+    <p>Save profiles directly to Excel</p>
+  </div>
+
+  <div class="body">
+    <div class="count-badge">
+      <div>
+        <div class="count-text">Profiles saved</div>
+      </div>
+      <div class="count-num" id="profile-count">0</div>
+    </div>
+
+    <div class="profiles-list" id="profiles-list">
+      <div class="empty-state">
+        <div class="empty-icon">📋</div>
+        No profiles saved yet.<br>Visit an Instagram profile to start.
+      </div>
+    </div>
+
+    <button class="btn-export" id="btn-export">⬇ Export All to Excel (CSV)</button>
+    <button class="btn-clear" id="btn-clear">🗑 Clear All Saved Profiles</button>
+
+    <div class="divider"></div>
+    <p class="tip">Navigate to any Instagram profile page and click the <strong>"Profile Vault"</strong> button that appears.</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
