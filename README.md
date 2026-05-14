@@ -1,10 +1,10 @@
-# 📸 Instagram Profile Saver - Chrome Extension
+#  Instagram Profile Saver - Chrome Extension
 
 Save Instagram profile data (followers, bio, posts) directly to an Excel/CSV file with one click.
 
 ---
 
-## ✅ Features
+##  Features
 - **Save button** injected on every Instagram profile page
 - **Optional fields**: Custom Name, Category, Notes
 - Captures: Username, Full Name, Bio, Posts, Followers, Following
@@ -13,7 +13,7 @@ Save Instagram profile data (followers, bio, posts) directly to an Excel/CSV fil
 
 ---
 
-## 🚀 How to Install (Chrome)
+##  How to Install (Chrome)
 
 1. **Download** and unzip this folder
 2. Open Chrome and go to: `chrome://extensions/`
@@ -24,7 +24,7 @@ Save Instagram profile data (followers, bio, posts) directly to an Excel/CSV fil
 
 ---
 
-## 📖 How to Use
+##  How to Use
 
 1. Go to any Instagram profile (e.g. `instagram.com/username`)
 2. Wait for the page to load — a **"Profile Vault"** button will appear below the profile bio
@@ -37,7 +37,7 @@ Save Instagram profile data (followers, bio, posts) directly to an Excel/CSV fil
 
 ---
 
-## 📊 Excel Columns
+##  Excel Columns
 
 | Column | Description |
 |--------|-------------|
@@ -55,7 +55,7 @@ Save Instagram profile data (followers, bio, posts) directly to an Excel/CSV fil
 
 ---
 
-## ⚠️ Notes
+##  Notes
 
 - Works on **public profiles** you can view while logged in
 - Instagram changes its HTML structure often — if data isn't captured, the extension may need a selector update
@@ -63,7 +63,7 @@ Save Instagram profile data (followers, bio, posts) directly to an Excel/CSV fil
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 **Button not appearing?**
 - Refresh the page and wait 2-3 seconds
